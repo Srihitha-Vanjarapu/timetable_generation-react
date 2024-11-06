@@ -39,3 +39,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build  # Path to the build folder for React
+
+      - name: Disable Jekyll
+  run: echo > ./build/.nojekyll
