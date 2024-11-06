@@ -1,0 +1,41 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch if it's different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Use the appropriate Node version for your project
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm install
+          npx update-browserslist-db@latest  # Update browserslist database
+          npm install @babel/plugin-proposal-private-property-in-object --save-dev  # Add missing Babel plugin
+
+      # Step 4: Build the project
+      - name: Build React App
+        env:
+          CI: false  # Prevent treating warnings as errors
+        run: npm run build
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Path to the build folder for React
