@@ -1,20 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./PageNotFound.css"; // Import CSS file for styling
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PageNotFound() {
-  return (
-    <div className="not-found-container">
-      <h2 className="not-found-heading">404 - Page Not Found</h2>
-      <p className="not-found-message">
-        Oops! The page you are looking for could not be found.
-      </p>
-      <p className="not-found-suggestion">
-        Please check the URL or go back to the{" "}
-        <Link to="HomePage">homepage</Link>.
-      </p>
-    </div>
-  );
+  const navigate = useNavigate();
+
+  // Automatically navigate to the homepage when the component mounts
+  useEffect(() => {
+    navigate("/HomePage");
+  }, [navigate]);
+
+  return null; // Don't display anything
 }
 
 export default PageNotFound;

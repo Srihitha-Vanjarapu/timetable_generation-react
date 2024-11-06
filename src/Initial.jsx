@@ -195,7 +195,7 @@ function Initial() {
         <BrowserRouter>
           <Routes>
             <Route
-              path="/HomePage"
+              path="/timetable"
               element={<Navigate to="/HomePage" />} // Redirect to HomePage
             />
 
