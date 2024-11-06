@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/timetable_generation-react/static/css/main.944cae5d.css",
-    "main.js": "/timetable_generation-react/static/js/main.beacef55.js",
+    "main.js": "/timetable_generation-react/static/js/main.58615e4f.js",
     "static/js/787.1f4915a4.chunk.js": "/timetable_generation-react/static/js/787.1f4915a4.chunk.js",
     "index.html": "/timetable_generation-react/index.html",
     "main.944cae5d.css.map": "/timetable_generation-react/static/css/main.944cae5d.css.map",
-    "main.beacef55.js.map": "/timetable_generation-react/static/js/main.beacef55.js.map",
+    "main.58615e4f.js.map": "/timetable_generation-react/static/js/main.58615e4f.js.map",
     "787.1f4915a4.chunk.js.map": "/timetable_generation-react/static/js/787.1f4915a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.944cae5d.css",
-    "static/js/main.beacef55.js"
+    "static/js/main.58615e4f.js"
   ]
 }
